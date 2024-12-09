@@ -2,6 +2,24 @@
 
 import Foundation
 
-var greeting = "Hello, playground"
+struct PersonName{
+    let firstName: String
+    let lastName: String
+    let middleName: String
+    
+    func fullName() -> String{
+        return "\(firstName) \(middleName) \(lastName)"
+    }
+    
+    // Method to change familyName property. Prefix with mutating keyword
+    
+    mutating func change(lastName: String){
+        self.lastName = lastName
+    }
+}
+
+var jonathan = PersonName(firstName: "Jonathan", lastName: "Smith", middleName: "")
+print(jonathan)
+
 
 //: [Next](@next)
