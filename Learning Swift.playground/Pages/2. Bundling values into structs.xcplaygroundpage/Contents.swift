@@ -21,5 +21,9 @@ struct PersonName{
 var jonathan = PersonName(firstName: "Jonathan", lastName: "Smith", middleName: "")
 print(jonathan)
 
+//when we mutate, only that variable is changed
+jonathan.change(lastName: "Jones")
+print(jonathan)
+
 
 //: [Next](@next)
