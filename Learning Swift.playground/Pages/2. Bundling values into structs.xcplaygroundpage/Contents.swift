@@ -4,7 +4,7 @@ import Foundation
 
 struct PersonName{
     let firstName: String
-    let lastName: String
+    var lastName: String
     let middleName: String
     
     func fullName() -> String{

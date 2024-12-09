@@ -22,26 +22,25 @@ class Person{
     
     var whereWeMet: String?
     
-    override var displayString: String {
-        let meetingPlace = whereWeMet ?? "Don't know where we met"
-        return "\(super.displayString) - \(meetingPlace)"
-    }
-    
 }
 
 final class Family: Person {
     let relationship: String
     init(firstName: String, lastName: String, relationship: String) {
         self.relationship = relationship
-        super.init(firstName: firstName, lastName: lastName)
+        super.init(
+            firstName: firstName,
+            lastName: lastName,
+            countryOfResidence: "UK"
+        )
     }
     
-    override displayString: String {
+    override var displayString: String {
         return "\(super.displayString) - \(relationship)"
     }
 }
 
-let steve = Person(firstName: "Steve", lastName: "Paul")
+let steve = Person(firstName: "Steve", lastName: "Paul", countryOfResidence: "UK")
 let sam = Family(firstName: "Sam", lastName: "Jones", relationship: "Brother")
 sam.whereWeMet = "London"
 print(sam.displayString)
